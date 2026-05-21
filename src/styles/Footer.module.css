@@ -1,0 +1,175 @@
+.footer {
+  background: linear-gradient(to bottom, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0.93) 100%);
+  border-top: 1px solid rgba(197, 160, 89, 0.25); /* Üstteki o belirgin ince altın şerit */
+  padding: 40px 0 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1140px; /* Görseldeki elemanların sıkı ve şık durmasını sağlayan genişlik */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 40px;
+}
+
+/* --- SOL SÜTUN (Logo & Sosyal Medya) --- */
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  height: 54px; /* Tasarımdaki logonun footer'daki tam yüksekliği */
+  object-fit: contain;
+  align-self: flex-start;
+}
+
+.slogan {
+  color: #554d48; /* Tasarımdaki sönük, kahvemsi gri tonlu alt yazı */
+  font-size: 13px;
+  margin-top: 18px;
+  margin-bottom: 22px;
+  font-weight: 400;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 12px;
+}
+
+/* Tasarımdaki ikonların etrafındaki o koyu kırmızı, karemsi yuvarlak halkalar */
+.iconCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px; /* Tam yuvarlak değil, tasarımdaki gibi hafif yumuşatılmış köşeli */
+  background-color: #240507; /* Orijinal koyu şarap/bordo rengi dolgu */
+  border: 1px solid #3d0c10; /* Çerçeve rengi */
+  color: #C5A059; /* İkon rengi altın */
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.iconCircle:hover {
+  background-color: #610C11;
+  color: #ffffff;
+  border-color: #C5A059;
+}
+
+/* --- ORTA SÜTUN (İletişim) --- */
+.middleColumn {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding-top: 5px;
+}
+
+.columnTitle {
+  color: #C5A059; /* Başlık rengi lüks altın */
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.14em; /* Harf araları açık tasarımdaki gibi */
+  margin: 0 0 25px 0;
+}
+
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px; /* Satırların birbiriyle olan tam mesafesi */
+}
+
+.contactList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.contactIcon {
+  color: #C5A059; /* İkonlar altın sarısı */
+  font-size: 14px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.contactText, .contactLink {
+  color: #a39b95; /* Tasarımdaki hafif grimsi mat beyaz ton */
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.contactLink:hover {
+  color: #C5A059;
+}
+
+.timeWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.subTimeText {
+  color: #554d48; /* "Ежедневно" yazısının sönük rengi */
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* --- SAĞ SÜTUN (Harita) --- */
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  padding-top: 5px;
+}
+
+.mapFrame {
+  width: 100%;
+  height: 145px; /* Tasarımdaki haritanın tam en-boy basıklık oranı */
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(197, 160, 89, 0.3); /* Etrafındaki altın çizgili ince kontür */
+}
+
+/* --- EN ALT BAR --- */
+.bottomBar {
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  margin-top: 45px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.copyrightText {
+  color: #423c38; /* Tasarımdaki telif yazısının görünmeye yakın gizemli koyuluğu */
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+/* Responsive Düzen */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 35px;
+    padding: 0 20px;
+  }
+  .leftColumn, .middleColumn, .rightColumn {
+    width: 100%;
+  }
+  .mapFrame {
+    height: 160px;
+  }
+}

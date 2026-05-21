@@ -1,0 +1,732 @@
+.homeContainer {
+  background-image: url("https://i.pinimg.com/736x/e8/7c/9c/e87c9c769160d810aea9f4ce86361e84.jpg");
+  color: #E2E2E2;
+  width: 100%;
+  padding-top: 85px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Cinzel', 'Playfair Display', 'Segoe UI', serif;
+}
+
+/* --- SECTION DIVIDER (DİKEY BAĞLANTI VE SONSUZLUK LOGOSU) --- */
+.sectionDivider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0;
+  position: relative;
+  z-index: 5;
+}
+
+.verticalLine {
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, rgba(197, 160, 89, 0.4), transparent);
+  margin-bottom: 18px;
+}
+
+.dividerLogo {
+  height: 22px;
+  object-fit: contain;
+  opacity: 0.85;
+  filter: drop-shadow(0 0 10px rgba(197, 160, 89, 0.35));
+}
+
+/* --- HERO SECTION --- */
+.heroSection {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroBgOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.32) contrast(1.05);
+  background-attachment: fixed;
+  z-index: 1;
+  transition: background-image 0.8s cubic-bezier(0.4, 0, 0.2, 1); /* Görseller arası akıcı sinematik geçiş */
+}
+
+.ambientGlow {
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 40%;
+  background: radial-gradient(circle, rgba(97, 12, 17, 0.22) 0%, transparent 70%);
+  z-index: 2;
+}
+
+.heroContent {
+  max-width: 850px;
+  padding: 0 20px;
+  z-index: 5;
+  animation: fadeInBlur 0.6s ease-out; /* Butonlara her basıldığında yazılar havalı bir şekilde ekrana gelir */
+}
+
+@keyframes fadeInBlur {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.badgeTop {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(197, 160, 89, 0.06);
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  color: #C5A059;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+}
+
+.firePulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); color: #ff5100; }
+  100% { transform: scale(1); }
+}
+
+.heroTitle {
+  font-size: 100px;
+  color: #ffffff;
+  font-weight: 200;
+  letter-spacing: 0.22em;
+  margin: 0;
+  line-height: 1;
+}
+
+.titleDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.goldLine {
+  height: 1px;
+  width: 80px;
+  background: linear-gradient(to right, transparent, #C5A059);
+}
+
+.titleDivider span:last-child {
+  background: linear-gradient(to left, transparent, #C5A059);
+}
+
+.goldDiamond {
+  color: #C5A059;
+  font-size: 10px;
+}
+
+.heroSubtitle {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  line-height: 1.5;
+  margin: 0 0 30px 0;
+}
+
+.goldGradientText {
+  background: linear-gradient(45deg, #C5A059 30%, #FFF4D0 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.heroDescription {
+  font-size: 14px;
+  color: #bfaea4;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto 45px auto;
+}
+
+.heroButtons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.btnPrimaryClick {
+  display: inline-flex; /* Link uyumluluğu için eklendi */
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Link çizgilerini sıfırlar */
+  background: linear-gradient(135deg, #610C11 0%, #41070A 100%);
+  color: white;
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  padding: 16px 38px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(97, 12, 17, 0.3);
+}
+
+.btnPrimaryClick:hover {
+  transform: translateY(-2px);
+  border-color: #C5A059;
+  color: white; /* Hover durumunda rengi koru */
+}
+
+.btnSecondaryLuxury {
+  display: inline-flex; /* Link uyumluluğu için eklendi */
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Link çizgilerini sıfırlar */
+  background-color: rgba(12, 7, 5, 0.6);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 16px 38px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border-radius: 3px;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.btnSecondaryLuxury:hover {
+  border-color: #C5A059;
+  color: #C5A059;
+  transform: translateY(-2px);
+}
+
+.verticalPagination {
+  position: absolute;
+  left: 45px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: center;
+  z-index: 5;
+}
+
+.lineScroll {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, rgba(197, 160, 89, 0.3));
+}
+
+.pDot {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.25);
+  font-weight: 600;
+  cursor: pointer; /* Üzerine gelince tıklanabilir el işareti çıkar */
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.pDot:hover {
+  color: #C5A059;
+  transform: scale(1.2);
+}
+
+.pActive {
+  color: #C5A059;
+  font-size: 13px;
+  text-shadow: 0 0 10px rgba(197, 160, 89, 0.6);
+}
+
+/* --- BADGES --- */
+.badgesSection {
+  padding: 0px 40px;
+}
+
+.luxuryBadgesWrapper {
+  max-width: 1140px;
+  height: 120px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #1f0507 0%, #0c0405 100%);
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  border-radius: 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 22px 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+}
+
+.luxuryBadgeItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  border-right: 1px solid rgba(197, 160, 89, 0.12);
+  text-decoration: none; /* Link çizgilerini kaldırır */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.luxuryBadgeItem:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.luxuryBadgeItem:last-child {
+  border-right: none;
+}
+
+.iconBox {
+  font-size: 28px;
+  color: #C5A059;
+  background: rgba(197, 160, 89, 0.04);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(197, 160, 89, 0.15);
+  flex-shrink: 0;
+}
+
+.badgeInfoText {
+  text-align: left; /* Link olunca merkeze kaymaması için sabitlendi */
+}
+
+.badgeInfoText h4 {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 2px 0;
+}
+
+.badgeInfoText p {
+  color: #8c8179;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* --- ABOUT SECTION --- */
+.aboutSection {
+  padding-top: 150px;
+  padding-bottom: 0px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.aboutImageSide {
+  flex: 1;
+  position: relative;
+}
+
+.goldFrameBehind {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: 80%;
+  height: 100%;
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.aboutMainImage {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 4px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.experienceCard {
+  position: absolute;
+  bottom: 25px;
+  right: -15px;
+  background: linear-gradient(135deg, #610C11 0%, #240507 100%);
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  padding: 14px 22px;
+  border-radius: 4px;
+  z-index: 3;
+  text-align: center;
+}
+
+.experienceCard h5 {
+  font-size: 24px;
+  color: #C5A059;
+  margin: 0;
+}
+
+.experienceCard p {
+  font-size: 10px;
+  color: #ffffff;
+  margin: 2px 0 0 0;
+}
+
+.aboutContentSide {
+  flex: 1;
+}
+
+.luxurySub {
+  color: #C5A059;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.luxuryMainTitle {
+  font-size: 32px;
+  color: #ffffff;
+  font-weight: 400;
+  margin: 0 0 25px 0;
+}
+
+.goldText {
+  color: #C5A059;
+}
+
+.luxuryParagraph {
+  color: #a89d95;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.btnDiscover {
+  display: inline-flex; /* Link uyumluluğu için eklendi */
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Link çizgilerini sıfırlar */
+  background: transparent;
+  color: #C5A059;
+  border: 1px solid #C5A059;
+  padding: 12px 30px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnDiscover:hover {
+  background-color: #C5A059;
+  color: #0c0705;
+}
+
+/* --- YENİLENEN BAŞLIK ALANI (ПОПУЛЯРНЫЕ ШЕДЕВРЫ) --- */
+.gurmeMenuSection {
+  padding: 40px 40px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.luxuryMenuHeader {
+  text-align: center;
+  margin-bottom: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleTagLine {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.goldLineShort {
+  width: 25px;
+  height: 1px;
+  background-color: #C5A059;
+  opacity: 0.6;
+}
+
+.premiumLabel {
+  color: #C5A059;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.gurmeTitle {
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin: 0 0 14px 0;
+  font-family: 'Cinzel', 'Playfair Display', serif;
+}
+
+.menuSubDescription {
+  font-size: 13px;
+  color: #8c827a;
+  max-width: 520px;
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+}
+
+/* --- GRID VE 10 YEMEK KARTININ DİZAYNY --- */
+.sliderWrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.luxArrowBtn {
+  background: rgba(197, 160, 89, 0.02);
+  border: 1px solid rgba(197, 160, 89, 0.2);
+  color: #C5A059;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.luxArrowBtn:hover {
+  background-color: #C5A059;
+  color: #0c0705;
+  box-shadow: 0 0 15px rgba(197, 160, 89, 0.35);
+}
+
+.luxuryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  width: 100%;
+}
+
+.gurmeCard {
+  background: linear-gradient(to bottom, #140d0b 0%, #0c0705 100%);
+  border: 1px solid rgba(197, 160, 89, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gurmeCard:hover {
+  transform: translateY(-6px);
+  border-color: rgba(197, 160, 89, 0.45);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.65);
+}
+
+.cardImageContainer {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.cardImageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.gurmeCard:hover .cardImageContainer img {
+  transform: scale(1.06);
+}
+
+.cardTag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #240507;
+  color: #C5A059;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 2px;
+  border: 1px solid rgba(197, 160, 89, 0.25);
+}
+
+.gurmeCardBody {
+  padding: 22px 16px;
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+  justify-content: space-between;
+}
+
+.cardHeaderRow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gurmeCardBody h4 {
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.gurmeCard:hover .gurmeCardBody h4 {
+  color: #C5A059;
+}
+
+.miniGoldLine {
+  height: 1px;
+  width: 30px;
+  background-color: rgba(197, 160, 89, 0.4);
+  transition: width 0.35s ease;
+}
+
+.gurmeCard:hover .miniGoldLine {
+  width: 50px;
+}
+
+.gurmeCardBody p {
+  font-size: 12px;
+  color: #8c827a;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.gurmeCardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  padding-top: 12px;
+}
+
+.luxPrice {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.currency {
+  font-size: 11px;
+  color: #706761;
+  font-weight: 400;
+  margin-left: 2px;
+}
+
+.btnCardAction {
+  display: inline-flex; /* Link uyumluluğu için eklendi */
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Link çizgilerini sıfırlar */
+  background: transparent;
+  border: 1px solid #610C11;
+  color: #ffffff;
+  padding: 6px 16px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+.btnCardAction:hover {
+  background-color: #610C11;
+  color: #ffffff; /* Yazı rengini sabit tutar */
+  box-shadow: 0 0 10px rgba(97, 12, 17, 0.5);
+}
+
+.centerAction {
+  display: flex;
+  justify-content: center;
+  margin-top: 55px;
+}
+
+.btnLuxMenuLink {
+  display: inline-flex; /* Link uyumluluğu için eklendi */
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Link çizgilerini sıfırlar */
+  background: transparent;
+  border: 1px solid #C5A059;
+  color: #ffffff;
+  padding: 14px 45px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.btnLuxMenuLink:hover {
+  background-color: #610C11;
+  border-color: #610C11;
+  color: #ffffff; /* Yazı rengini korur */
+  box-shadow: 0 5px 20px rgba(97, 12, 17, 0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .luxuryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .luxuryBadgesWrapper {
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 30px;
+    height: auto; /* İçeriğin katlanabilmesi için auto yapıldı */
+    gap: 15px;
+  }
+  .luxuryBadgeItem {
+    border-right: none; /* Tablet düzeninde dikey çizgileri kaldırır */
+    justify-content: flex-start;
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutContainer {
+    flex-direction: column;
+  }
+  .heroTitle {
+    font-size: 55px;
+  }
+  .luxuryGrid {
+    grid-template-columns: 1fr;
+  }
+  .verticalPagination, .sectionDivider {
+    display: none;
+  }
+}

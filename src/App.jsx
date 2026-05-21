@@ -1,11 +1,25 @@
 import React from 'react'
-import Contact from './pages/Contact'
-import About from './pages/About'
+import './App.css'
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Home from './pages/Home';
+import ScrollToTop from './components/ScrollToTop';
+import { CssBaseline } from '@mui/material';
+import BackToTop from './components/BackToTop';
 
 const App = () => {
   return (
-    <Contact/>,
-    <About/>
+    <div>
+      <CssBaseline />
+      <ScrollToTop/>
+      <Header/>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+      </Routes>
+      <BackToTop />
+      <Footer/>
+    </div>
   )
 }
 
