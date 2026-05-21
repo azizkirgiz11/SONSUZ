@@ -141,7 +141,9 @@
   height: 145px; /* Tasarımdaki haritanın tam en-boy basıklık oranı */
   border-radius: 6px;
   overflow: hidden;
-  border: 1px solid rgba(197, 160, 89, 0.3); /* Etrafındaki altın çizgili ince kontür */
+  border: 1px solid #1a1a1a;
+  background-color: #0d0d0d;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
 /* --- EN ALT BAR --- */

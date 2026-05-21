@@ -1,0 +1,255 @@
+.aboutContainer {
+  background-image: url("https://wallpapercave.com/wp/wp2878569.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #F5F5F7;
+  min-height: 100vh;
+  padding-top: 160px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Cinzel', 'Playfair Display', serif;
+  position: relative;
+}
+
+.aboutContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 15% 25%, rgba(42, 8, 12, 0.6) 0%, transparent 50%),
+              radial-gradient(circle at 85% 75%, rgba(212, 175, 55, 0.05) 0%, transparent 60%),
+              linear-gradient(to bottom, rgba(10, 10, 11, 0.9), rgba(15, 10, 11, 0.95));
+  z-index: 1;
+}
+
+/* --- HERO BLOCK --- */
+.heroWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+.heroLeft {
+  width: 45%;
+}
+
+.tagline {
+  color: #D4AF37;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.mainTitle {
+  font-size: 64px;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  margin: 0 0 30px 0;
+  line-height: 1.1;
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.description {
+  color: #C3C3C6;
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 45px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+}
+
+/* YENİLENEN LINK / BUTTON STİLİ */
+.menuButton {
+  display: inline-block; /* Buton formuna girmesi için kritik */
+  text-decoration: none; /* Linkin altındaki çizgiyi siler */
+  background: transparent;
+  border: 1px solid #D4AF37;
+  color: #D4AF37;
+  padding: 18px 45px;
+  border-radius: 0px;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-family: 'Cinzel', serif;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.menuButton:hover {
+  background: #D4AF37;
+  color: #0A0A0B;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.heroRightImage {
+  width: 55%;
+  height: 560px;
+  border-radius: 0px;
+  overflow: hidden;
+  position: relative;
+}
+
+.heroRightImage::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(10, 10, 11, 0.4), transparent);
+  pointer-events: none;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85) contrast(1.05);
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.heroRightImage:hover .image {
+  transform: scale(1.03);
+}
+
+/* --- PREMIUM INFO CARDS --- */
+.cardsWrapper {
+  max-width: 1200px;
+  margin: 100px auto 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 0 40px;
+  position: relative;
+  z-index: 5;
+}
+
+.card {
+  flex: 1;
+  background: rgba(18, 18, 20, 0.4);
+  border-left: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 0px;
+  padding: 30px 0 30px 30px;
+  backdrop-filter: blur(8px);
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  border-left-color: #D4AF37;
+  background: rgba(42, 8, 12, 0.15);
+  transform: translateX(5px);
+}
+
+.cardTitle {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.cardText {
+  color: #A9A9AE;
+  line-height: 1.8;
+  font-size: 14px;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+}
+
+/* --- MINIMAL STATS PANEL --- */
+.statsWrapper {
+  max-width: 1200px;
+  margin: 120px auto 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.12);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+  position: relative;
+  z-index: 5;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statNumber {
+  color: #D4AF37;
+  font-size: 54px;
+  font-weight: 200;
+  letter-spacing: -1px;
+  margin: 0 0 8px 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.statText {
+  color: #8E8E93;
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .heroWrapper {
+    flex-direction: column-reverse;
+    gap: 50px;
+    text-align: center;
+  }
+  
+  .heroLeft, .heroRightImage {
+    width: 100%;
+  }
+
+  .heroRightImage {
+    height: 400px;
+  }
+
+  .cardsWrapper {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 70px;
+  }
+
+  .card {
+    padding: 20px 0 20px 25px;
+  }
+
+  .statsWrapper {
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 80px;
+  }
+
+  .statItem {
+    flex: 0 0 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 44px;
+  }
+  .statItem {
+    flex: 0 0 100%;
+  }
+}
