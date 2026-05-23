@@ -1,8 +1,12 @@
 import React from 'react'
+import Reservation from './components/Booking'
+
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Reservation/>
+    </div>
   )
 }
 
