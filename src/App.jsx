@@ -1,4 +1,6 @@
 import React from 'react'
+import Reservation from './components/Booking'
+
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -19,6 +21,7 @@ const App = () => {
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About/>} />
         {/* <Route path="/menu" element={<Menu/>} /> */}
+        <Route path="/booking" element={<Reservation/>} />    
         <Route path="/contacts" element={<Contact/>} />
       </Routes>
       <BackToTop />
