@@ -5,41 +5,47 @@
   font-family: sans-serif;
 }
 
-.reservation-container {
+.reservationContainer {
   max-width: 1300px;
   margin: auto;
 }
 
-.reservation-title {
+.reservationTitle {
   text-align: center;
   margin-bottom: 60px;
 }
 
-.reservation-title p {
+.reservationTitle p {
   color: #d4af37;
   letter-spacing: 6px;
   margin-bottom: 10px;
 }
 
-.reservation-title h2 {
+.reservationTitle h2 {
   font-size: 52px;
   color: #d4af37;
   margin-bottom: 10px;
 }
 
-.reservation-title span {
+.reservationTitle span {
   color: #999;
   font-size: 18px;
 }
 
-.reservation-content {
+.reservationSubtitle {
+  color: #d4af37;
+  letter-spacing: 6px;
+  margin-bottom: 10px;
+}
+
+.reservationContent {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
 }
 
-.reservation-image img {
+.reservationImage img {
   width: 100%;
   height: 550px;
   object-fit: cover;
@@ -47,34 +53,33 @@
   border: 1px solid #5a0b0b;
 }
 
-.reservation-form {
+.reservationForm {
   background: #120202;
   border: 1px solid #5a0b0b;
   border-radius: 30px;
   padding: 40px;
 }
 
-.input-group {
+.formGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   margin-bottom: 20px;
 }
 
-.input-group div,
-.textarea-group {
+.formGrid div {
   display: flex;
   flex-direction: column;
 }
 
-label {
+.reservationForm label {
   margin-bottom: 10px;
   color: #aaa;
 }
 
-input,
-select,
-textarea {
+.reservationForm input,
+.reservationForm select,
+.reservationForm textarea {
   background: #1b0707;
   border: 1px solid #3b0c0c;
   color: white;
@@ -84,13 +89,13 @@ textarea {
   font-size: 16px;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
+.reservationForm input:focus,
+.reservationForm select:focus,
+.reservationForm textarea:focus {
   border-color: #d4af37;
 }
 
-button {
+.reservationForm button {
   width: 100%;
   margin-top: 20px;
   padding: 18px;
@@ -104,11 +109,11 @@ button {
   transition: 0.3s;
 }
 
-button:hover {
+.reservationForm button:hover {
   transform: scale(1.02);
 }
 
-.reservation-footer {
+.reservationFooter {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
@@ -117,23 +122,23 @@ button:hover {
   padding-top: 40px;
 }
 
-.reservation-footer h3 {
+.reservationFooter h3 {
   font-size: 38px;
   color: #d4af37;
   margin-bottom: 10px;
 }
 
-.reservation-footer h4 {
+.reservationFooter h4 {
   color: #d4af37;
   margin-bottom: 16px;
 }
 
-.reservation-footer p {
+.reservationFooter p {
   color: #999;
   margin-bottom: 10px;
 }
 
-.map-box {
+.mapBox {
   height: 150px;
   border-radius: 20px;
   background: #1b0707;
@@ -144,24 +149,20 @@ button:hover {
   color: #666;
 }
 
-/* RESPONSIVE */
-
 @media (max-width: 900px) {
-
-  .reservation-content {
+  .reservationContent {
     grid-template-columns: 1fr;
   }
 
-  .input-group {
+  .formGrid {
     grid-template-columns: 1fr;
   }
 
-  .reservation-footer {
+  .reservationFooter {
     grid-template-columns: 1fr;
   }
 
-  .reservation-title h2 {
+  .reservationTitle h2 {
     font-size: 38px;
   }
-
 }
